@@ -1,5 +1,7 @@
 # AutoMoq
-[![Build Status](https://travis-ci.org/darrencauthon/AutoMoq.svg?branch=master)](https://travis-ci.org/darrencauthon/AutoMoq)
+[![Build status](https://ci.appveyor.com/api/projects/status/oj6au2k61qr43ssw?svg=true)](https://ci.appveyor.com/project/MarkZither/automoq-unity5)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AutoMoq&metric=alert_status)](https://sonarcloud.io/dashboard?id=AutoMoq)
 
 AutoMoqer is an "auto-mocking" container that creates objects for you. Just tell it what class to create and it will create it.
 

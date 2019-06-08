@@ -32,7 +32,9 @@ namespace AutoMoq.Unity
         private void LoadAnyAbstractDependenciesOf(Type type)
         {
             foreach (var dependency in AbstractDependenciesOf(type))
+            {
                 BuildThisByAskingTheContainerForIt(dependency);
+            }
         }
 
         private void BuildThisByAskingTheContainerForIt(Type type)
@@ -54,7 +56,7 @@ namespace AutoMoq.Unity
                 .SelectMany(x => x.GetParameters())
                 .Distinct()
                 .Where(x => x.ParameterType.IsAbstract)
-                .Where(x => x.ParameterType.IsInterface == false)
+                .Where(x => !x.ParameterType.IsInterface)
                 .Select(x => x.ParameterType);
         }
 
