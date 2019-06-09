@@ -10,6 +10,9 @@
     <Product>AutoMoq.Tests</Product>
     <Copyright>Copyright � DEG 2010</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>tempKey.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>portable</DebugType>
