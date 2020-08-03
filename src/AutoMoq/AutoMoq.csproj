@@ -6,16 +6,23 @@
     <Product>AutoMoq.Unity.Standard</Product>
     <Description>Automocker for Moq.</Description>
     <Copyright>Copyright Mark Burton 2020</Copyright>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <FileVersion>5.0.0.0</FileVersion>
+    <AssemblyVersion>5.11.0.0</AssemblyVersion>
+    <FileVersion>5.11.0.0</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>5.0.0</Version>
+    <Version>5.11.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/MarkZither/AutoMoq-Unity5</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>tempKey.pfx</AssemblyOriginatorKeyFile>
+	<PackageProjectUrl>https://github.com/MarkZither/AutoMoq-Unity5</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/MarkZither/AutoMoq-Unity5</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>AutoMoq Unity</PackageTags>
+	<Authors>Mark Burton</Authors>
+	<PackageId>AutoMoq.Unity.Standard</PackageId>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<Company>Zither IT Ltd</Company>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>portable</DebugType>
