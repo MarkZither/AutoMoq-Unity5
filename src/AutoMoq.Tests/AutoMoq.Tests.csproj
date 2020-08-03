@@ -2,13 +2,10 @@
   <PropertyGroup>
     <ProductVersion>9.0.30729</ProductVersion>
     <TargetFramework>net47</TargetFramework>
-    <FileUpgradeFlags />
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
     <AssemblyTitle>AutoMoq.Tests</AssemblyTitle>
     <Company>DEG</Company>
     <Product>AutoMoq.Tests</Product>
-    <Copyright>Copyright � DEG 2010</Copyright>
+    <Copyright>Copyright MArk Burton 2020</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>tempKey.pfx</AssemblyOriginatorKeyFile>
@@ -39,6 +36,6 @@
     <PackageReference Include="Should" Version="1.1.20" />
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-    <PackageReference Include="Unity" Version="5.8.6" />
+    <PackageReference Include="Unity" Version="5.11.7" />
   </ItemGroup>
 </Project>
