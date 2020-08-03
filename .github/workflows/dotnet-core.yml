@@ -18,9 +18,9 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore src/AutoMoq.sln
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore
 #    - name: Test
 #      run: dotnet test --no-restore --verbosity normal
 
@@ -37,7 +37,7 @@ jobs:
         uses: rohith/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: src/AutoMoq/AutoMoq..csproj
+          PROJECT_FILE_PATH: src/AutoMoq/AutoMoq.csproj
           
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
