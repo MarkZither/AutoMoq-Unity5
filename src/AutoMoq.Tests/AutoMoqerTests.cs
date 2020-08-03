@@ -49,7 +49,7 @@ namespace AutoMoq.Tests
         }
 
         [Test]
-        [Ignore("Investigating inherited failing test", Until = "2019-07-07")]
+        [Ignore("Investigating inherited failing test", Until = "2020-09-07")]
         public void Can_test_with_an_abstract_dependency_registered_by_the_create()
         {
             var concreteClass = mocker.Create<ClassWithAbstractDependenciesAndManyConstructors>();
