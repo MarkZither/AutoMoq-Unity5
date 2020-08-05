@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>9.0.30729</ProductVersion>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyTitle>AutoMoq.Tests</AssemblyTitle>
     <Company>DEG</Company>
     <Product>AutoMoq.Tests</Product>
-    <Copyright>Copyright MArk Burton 2020</Copyright>
+    <Copyright>Copyright Mark Burton 2020</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>tempKey.pfx</AssemblyOriginatorKeyFile>
@@ -18,24 +18,23 @@
     <DebugType>portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AutoMoq\AutoMoq.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
-    <PackageReference Include="Moq" Version="4.11.0" />
+	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
+    <PackageReference Include="Moq" Version="4.14.5" />
     <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
-    <PackageReference Include="Should" Version="1.1.20" />
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="Shouldly" Version="3.0.2" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     <PackageReference Include="Unity" Version="5.11.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scenario\" />
   </ItemGroup>
 </Project>

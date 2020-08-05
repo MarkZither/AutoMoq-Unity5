@@ -3,7 +3,7 @@ using System.CodeDom;
 using System.Configuration;
 using Moq;
 using NUnit.Framework;
-using Should;
+using Shouldly;
 
 namespace AutoMoq.Tests
 {
@@ -89,7 +89,7 @@ namespace AutoMoq.Tests
 			var errorWasHit = false;
 			try {
 				var mockedInterface = mocker.Create<IDependency>();
-			    mockedInterface.ShouldImplement(typeof(IDependency));
+			    mockedInterface.ShouldBeOfType(typeof(IDependency));
 			} catch {
 				errorWasHit = true;
 			}

@@ -1,6 +1,6 @@
 ﻿using Moq;
 using NUnit.Framework;
-using Should;
+using Shouldly;
 using Unity;
 
 namespace AutoMoq.Tests

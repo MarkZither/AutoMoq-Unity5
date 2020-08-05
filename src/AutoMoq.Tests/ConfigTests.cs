@@ -1,6 +1,6 @@
 using Moq;
 using NUnit.Framework;
-using Should;
+using Shouldly;
 
 namespace AutoMoq.Tests
 {
@@ -13,7 +13,7 @@ namespace AutoMoq.Tests
             public void It_should_default_to_loose()
             {
                 var config = new Config();
-                config.MockBehavior.ShouldEqual(MockBehavior.Loose);
+                config.MockBehavior.ShouldBe(MockBehavior.Loose);
             }
         }
     }
