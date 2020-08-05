@@ -35,6 +35,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
+    <PackageReference Include="GitVersion.CommandLine" Version="5.3.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Moq" Version="4.11.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
