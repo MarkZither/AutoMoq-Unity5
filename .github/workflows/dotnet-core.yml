@@ -87,7 +87,7 @@ jobs:
           # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: src/AutoMoq/AutoMoq.csproj
 
-          VERSION_STATIC: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+          VERSION_STATIC: ${{ steps.gitversion.outputs.nuGetVersionV2 }}
           
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
