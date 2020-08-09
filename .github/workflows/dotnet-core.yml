@@ -75,7 +75,7 @@ jobs:
       - name: Pack
         run: dotnet pack src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore -p:Version=${{ steps.gitversion.outputs.assemblySemVer }}
       - name: PublishManually
-        run: dotnet nuget push *.nupkg -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+        run: dotnet nuget push *.nupkg -s "https://api.nuget.org/v3/index.json" -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
       # Publish
       - name: publish on version change
         id: publish_nuget
