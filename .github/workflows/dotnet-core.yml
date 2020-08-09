@@ -61,10 +61,10 @@ jobs:
           echo "CommitsSinceVersionSource: ${{ steps.gitversion.outputs.commitsSinceVersionSource }}"
           echo "CommitsSinceVersionSourcePadded: ${{ steps.gitversion.outputs.commitsSinceVersionSourcePadded }}"
           echo "CommitDate: ${{ steps.gitversion.outputs.commitDate }}"
-        - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
-       with:
+        with:
          dotnet-version: 3.1.301
       - name: Install dependencies
         run: dotnet restore src/AutoMoq.sln
