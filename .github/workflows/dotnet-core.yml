@@ -73,8 +73,9 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --verbosity normal src/AutoMoq.Tests/AutoMoq.Tests.csproj
       - name: Pack
-        run: dotnet build src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore -p:Version=${{ steps.gitversion.outputs.assemblySemVer }}
-      
+        run: dotnet pack src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore -p:Version=${{ steps.gitversion.outputs.assemblySemVer }}
+      - name: PublishManually
+        run: dotnet nuget push *.nupkg -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
       # Publish
       - name: publish on version change
         id: publish_nuget
