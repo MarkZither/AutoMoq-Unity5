@@ -69,9 +69,11 @@ jobs:
       - name: Install dependencies
         run: dotnet restore src/AutoMoq.sln
       - name: Build
-        run: dotnet build src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore
+        run: dotnet build src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore -p:Version=${{ steps.gitversion.outputs.assemblySemVer }}
       - name: Test
-        run: dotnet test --no-restore --verbosity normal src/AutoMoq.Tests/AutoMoq.Tests.csproj
+        run: Pack
+        run: dotnet pack src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore -p:Version=${{ steps.gitversion.outputs.assemblySemVer }}
+      
       # Publish
       - name: publish on version change
         id: publish_nuget
