@@ -9,23 +9,6 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.301
-    - name: Install dependencies
-      run: dotnet restore src/AutoMoq.sln
-    - name: Build
-      run: dotnet build src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal src/AutoMoq.Tests/AutoMoq.Tests.csproj
-
   # https://github.com/marketplace/actions/publish-nuget
   publish:
     name: build, pack & publish
@@ -78,7 +61,17 @@ jobs:
           echo "CommitsSinceVersionSource: ${{ steps.gitversion.outputs.commitsSinceVersionSource }}"
           echo "CommitsSinceVersionSourcePadded: ${{ steps.gitversion.outputs.commitsSinceVersionSourcePadded }}"
           echo "CommitDate: ${{ steps.gitversion.outputs.commitDate }}"
-
+        - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+       with:
+         dotnet-version: 3.1.301
+      - name: Install dependencies
+        run: dotnet restore src/AutoMoq.sln
+      - name: Build
+        run: dotnet build src/AutoMoq/AutoMoq.csproj --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal src/AutoMoq.Tests/AutoMoq.Tests.csproj
       # Publish
       - name: publish on version change
         id: publish_nuget
